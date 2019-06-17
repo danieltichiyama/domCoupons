@@ -2,19 +2,40 @@
 
 //And don't forget, please feel free to reach out for help. There is such a thing as a DOM question...
 
+function changeInnerHTML (id,str){
+    var thing = document.getElementById (id);
+    thing.innerHTML = str;
+}
+
 //1. Target the h3 element with the id of 'disclaimer' and change the contents to the follow finePrint variable.
 
+var disclaimer = document.getElementById ('disclaimer');
 var finePrint = 'Coupons VALID from Tuesday 12/4/2018 thru Saturday 6/29/2019. All sales FINAL. NO REFUNDS and EXCHANGES. And definitely NO RAINCHECKS! And ONLY POSITIVE reviews allowed on Social Media (FB, Instagram, Twitter, Yelp, etc.). And PLEASE Follow us on FB, Instagram, Twitter.'
+
+disclaimer.innerHTML = finePrint;
 
 //2. Target the div elemenet with the id of 'brand1' and update the content to Nabisco.
 
+var brand1 = document.getElementById('brand1');
+
+brand1.innerHTML = 'Nabisco';
+
 //3. Target the div element with the id of 'item1' and update the content with Cheeseburger Oreos. 
 
+changeInnerHTML('item1','Cheeseburger Oreos');
+
 //4. Target the div element with the id of 'price1' and update the content to $8.99.
+changeInnerHTML('price1','$8.99');
 
 //5. Target the button element with the id of 'discount1' and update the content to Free fries with purchase!
 
+changeInnerHTML('discount1','Free fries with purchase!');
+
 //6. Create a div element with the id of 'item2' and update the content to Hendrick's Gin. Append this element to William Grand & Sons div.
+
+newDiv = document.createElement('div');
+newDiv.innerHTML = "Hendrick's Gin";
+document.getElementById('brand2').appendChild (newDiv);
 
 //7. Create a div element with the id of 'price2' and update the content to $34.99. Append this element to the Hendrick's Gin div.
 
